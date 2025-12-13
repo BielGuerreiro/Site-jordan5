@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu-topo">
+        <ul>
+          <li><i class="bx bx-menu"></i></li>
+          <li><i class="bx bx-home"></i></li>
+          <li><i class="bx bx-shopping-bag"></i></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="barra-pesquisa">
+        <input type="text" placeholder="Search..." />
+        <i class="bx bx-search"></i>
+      </div>
+
+      <div class="banner">
+        <img class="slider-item active" src="img/banner.webp" alt="Banner 1" />
+        <img class="slider-item" src="img/banner2.webp" alt="Banner 2" />
+        <img class="slider-item" src="img/banner3.webp" alt="Banner 3" />
+
+        <div class="slider-indicators">
+          <div class="indicator active"></div>
+          <div class="indicator"></div>
+          <div class="indicator"></div>
+        </div>
+      </div>
+
+      <div class="container-vendidos">
+        <div class="titulo">
+          <h2>Confira os produtos Mais vendidos!</h2>
+        </div>
+        <i class="bx bx-chevron-left seta-slider esquerda"></i>
+
+        <div class="slider-wrapper">
+          <div class="produto-slide">
+            <div class="box-cinza">
+              <img src="img/produto1.avif" alt="jordan1" />
+            </div>
+            <div class="info-produto">
+              <h3>Air Jordan 5 White/Pink</h3>
+              <p>R$ 299,90</p>
+            </div>
+          </div>
+
+          <div class="produto-slide">
+            <div class="box-cinza">
+              <img src="img/produto2.png" alt="jordan2" />
+            </div>
+            <div class="info-produto">
+              <h3>Air Jordan 5 Purple</h3>
+              <p>R$ 450,00</p>
+            </div>
+          </div>
+
+          <div class="produto-slide">
+            <div class="box-cinza">
+              <img src="img/produto3.png" alt="jordan3" />
+            </div>
+            <div class="info-produto">
+              <h3>Air Jordan 5 White/Red</h3>
+              <p>R$ 180,00</p>
+            </div>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-right seta-slider direita"></i>
+      </div>
+
+      <div class="area-destaque">
+        <h2>Coleção Exclusiva</h2>
+
+        <div class="grid-imagens">
+          <img class="destaque-img" src="img/banner4.jpg" alt="Destaque 1" />
+
+          <img class="destaque-img" src="img/banner5.webp" alt="Destaque 2" />
+
+          <img
+            class="destaque-img destaque-full"
+            src="img/banner6.webp"
+            alt="Destaque Grande"
+          />
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
