@@ -12,59 +12,39 @@
   </head>
   <body>
     <header>
-      <div class="menu-topo">
+      <div class="menu">
         <ul>
-          <li><i class="bx bx-menu"></i></li>
-          <li class="home-destaque"><i class="bx bx-home-alt"></i></li>
-          <li><i class="bx bx-shopping-bag"></i></li>
+          <li class="btn-menu-toggle"><i class="bx bx-menu"></i></li>
+
+          <li class="home-destaque" id="btn-central-acao">
+            <i class="bx bx-home-alt icon-home"></i>
+            <img
+              src="img/voltar.png"
+              alt="Fechar Menu"
+              class="icon-close-img"
+            />
+          </li>
+
+          <li class="btn-carrinho-toggle">
+            <i class="bx bx-shopping-bag"></i>
+          </li>
         </ul>
       </div>
     </header>
 
-    <!-- <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-expandido">
+      <h3>Menu Principal</h3>
+      <ul>
+        <li>Início</li>
+        <li>Produtos</li>
+        <li>Contato</li>
+      </ul>
+    </div>
 
-    <aside class="sidebar-menu" id="sidebarMenu">
-      <div class="menu-header-center">
-        <div class="perfil-neumorph-big">
-          <i class="bx bx-user"></i>
-        </div>
-        <div class="fechar-menu-absolute" id="btnFechar">
-          <i class="bx bx-x"></i>
-        </div>
-      </div>
-
-      <nav class="menu-links">
-        <ul>
-          <li class="link-item active">
-            <a href="#">
-              <div class="icon-box"><i class="bx bx-home-alt"></i></div>
-              <span>Início</span>
-            </a>
-          </li>
-
-          <li class="link-item">
-            <a href="#">
-              <div class="icon-box"><i class="bx bx-shopping-bag"></i></div>
-              <span>Produtos</span>
-            </a>
-          </li>
-
-          <li class="link-item">
-            <a href="#">
-              <div class="icon-box"><i class="bx bx-heart"></i></div>
-              <span>Favoritos</span>
-            </a>
-          </li>
-
-          <li class="link-item">
-            <a href="#">
-              <div class="icon-box"><i class="bx bx-cog"></i></div>
-              <span>Configurações</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </aside> -->
+    <div class="carrinho-expandido">
+      <h3>Seu Carrinho</h3>
+      <p>O carrinho está vazio.</p>
+    </div>
 
     <main>
       <div class="barra-pesquisa">

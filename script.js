@@ -61,22 +61,51 @@ btnAnteriorProd.addEventListener("click", () => {
   moverCarrosselProdutos();
 });
 
-// const btnMenu = document.querySelector(".bx-menu");
-// const sidebarMenu = document.getElementById("sidebarMenu");
-// const menuOverlay = document.getElementById("menuOverlay");
-// const btnFechar = document.getElementById("btnFechar");
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const btnMenu = document.querySelector(".btn-menu-toggle");
+  const btnCarrinho = document.querySelector(".btn-carrinho-toggle");
+  const btnCentral = document.getElementById("btn-central-acao");
 
-// function toggleMenu() {
-//   sidebarMenu.classList.toggle("aberto");
-//   menuOverlay.classList.toggle("aberto");
+  const boxMenu = document.querySelector(".menu-expandido");
+  const boxCarrinho = document.querySelector(".carrinho-expandido");
 
-//   if (sidebarMenu.classList.contains("aberto")) {
-//     document.body.style.overflow = "hidden";
-//   } else {
-//     document.body.style.overflow = "auto";
-//   }
-// }
+  function fecharTudo() {
+    if (boxMenu) boxMenu.classList.remove("aberto");
+    if (boxCarrinho) boxCarrinho.classList.remove("aberto");
+    header.classList.remove("menu-ativo");
+  }
 
-// btnMenu.addEventListener("click", toggleMenu);
-// btnFechar.addEventListener("click", toggleMenu);
-// menuOverlay.addEventListener("click", toggleMenu);
+  if (btnMenu) {
+    btnMenu.addEventListener("click", () => {
+      console.log("Clicou no Menu");
+
+      if (boxCarrinho) boxCarrinho.classList.remove("aberto");
+
+      if (boxMenu) boxMenu.classList.add("aberto");
+      header.classList.add("menu-ativo");
+    });
+  }
+
+  if (btnCarrinho) {
+    btnCarrinho.addEventListener("click", () => {
+      console.log("Clicou no Carrinho");
+
+      if (boxMenu) boxMenu.classList.remove("aberto");
+
+      if (boxCarrinho) boxCarrinho.classList.add("aberto");
+      header.classList.add("menu-ativo");
+    });
+  }
+
+  if (btnCentral) {
+    btnCentral.addEventListener("click", () => {
+      console.log("Clicou no Central");
+      if (header.classList.contains("menu-ativo")) {
+        fecharTudo();
+      } else {
+        console.log("Ação Home");
+      }
+    });
+  }
+});
