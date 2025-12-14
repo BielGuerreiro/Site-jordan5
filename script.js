@@ -60,3 +60,23 @@ btnAnteriorProd.addEventListener("click", () => {
 
   moverCarrosselProdutos();
 });
+
+// const btnMenu = document.querySelector(".bx-menu");
+// const sidebarMenu = document.getElementById("sidebarMenu");
+// const menuOverlay = document.getElementById("menuOverlay");
+// const btnFechar = document.getElementById("btnFechar");
+
+// function toggleMenu() {
+//   sidebarMenu.classList.toggle("aberto");
+//   menuOverlay.classList.toggle("aberto");
+
+//   if (sidebarMenu.classList.contains("aberto")) {
+//     document.body.style.overflow = "hidden";
+//   } else {
+//     document.body.style.overflow = "auto";
+//   }
+// }
+
+// btnMenu.addEventListener("click", toggleMenu);
+// btnFechar.addEventListener("click", toggleMenu);
+// menuOverlay.addEventListener("click", toggleMenu);
