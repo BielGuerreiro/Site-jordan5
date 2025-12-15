@@ -11,6 +11,10 @@
     />
   </head>
   <body>
+    <div class="logo">
+      <img src="img/Nike-Logo.png" alt="" />
+    </div>
+
     <header>
       <div class="menu">
         <ul>
@@ -18,6 +22,7 @@
 
           <li class="home-destaque" id="btn-central-acao">
             <i class="bx bx-home-alt icon-home"></i>
+
             <img
               src="img/voltar.png"
               alt="Fechar Menu"
@@ -33,12 +38,39 @@
     </header>
 
     <div class="menu-expandido">
-      <h3>Menu Principal</h3>
-      <ul>
-        <li>Início</li>
-        <li>Produtos</li>
-        <li>Contato</li>
-      </ul>
+      <div class="menu-container">
+        <div class="user" onclick="toggleMenu()">
+          <i class="bx bx-user"></i>
+          <span class="user-name" id="nome-usuario">Olá, Doritoz</span>
+        </div>
+
+        <div class="login-opcoes" id="meuMenu">
+          <a href="#" class="btn-auth" id="entrar">Entrar</a>
+          <a href="#" class="btn-auth">Cadastrar</a>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-box">
+          <i class="fa-solid fa-user"></i>
+          <span>Perfil</span>
+        </div>
+
+        <div class="menu-box">
+          <i class="fa-solid fa-heart"></i>
+          <span>Perfil</span>
+        </div>
+
+        <div class="menu-box">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Perfil</span>
+        </div>
+
+        <div class="menu-box">
+          <i class="fa-solid fa-gear"></i>
+          <span>Perfil</span>
+        </div>
+      </div>
     </div>
 
     <div class="carrinho-expandido">
@@ -48,7 +80,7 @@
 
     <main>
       <div class="barra-pesquisa">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Pesquisar" />
         <i class="bx bx-search"></i>
       </div>
 

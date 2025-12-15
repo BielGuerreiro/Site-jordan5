@@ -109,3 +109,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// parte do login box _________________________________________
+const iconeUser = document.querySelector(".user");
+const boxLogin = document.getElementById("box-login");
+
+iconeUser.addEventListener("click", function () {
+  boxLogin.classList.toggle("ativo");
+});
+
+document.addEventListener("click", function (event) {
+  const clicouDentro =
+    iconeUser.contains(event.target) || boxLogin.contains(event.target);
+
+  if (!clicouDentro) {
+    boxLogin.classList.remove("ativo");
+  }
+});
+
+function toggleMenu() {
+  const menu = document.getElementById("meuMenu");
+  menu.classList.toggle("ativo");
+}
