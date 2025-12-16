@@ -339,6 +339,16 @@ main {
   gap: 25px 20px;
 }
 
+.ver-mais {
+  margin-top: 50px;
+}
+
+.ver-mais a {
+  color: var(--icon-color);
+  text-decoration: underline;
+  font-size: 20px;
+}
+
 .item-grade {
   display: flex;
   flex-direction: column;

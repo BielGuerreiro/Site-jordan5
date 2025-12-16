@@ -61,6 +61,7 @@ btnAnteriorProd.addEventListener("click", () => {
   moverCarrosselProdutos();
 });
 
+// box do menu e carrinhp __________________________________________________
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const btnMenu = document.querySelector(".btn-menu-toggle");
@@ -130,4 +131,41 @@ document.addEventListener("click", function (event) {
 function toggleMenu() {
   const menu = document.getElementById("meuMenu");
   menu.classList.toggle("ativo");
+}
+
+// codigo pra scrolar as img no celular _________________________________________________________
+const bannerContainer = document.querySelector(".banner");
+let touchstartX = 0;
+let touchendX = 0;
+
+// 1. Detecta onde o dedo tocou na tela
+bannerContainer.addEventListener("touchstart", function (event) {
+  touchstartX = event.changedTouches[0].screenX;
+});
+
+// 2. Detecta onde o dedo soltou a tela
+bannerContainer.addEventListener("touchend", function (event) {
+  touchendX = event.changedTouches[0].screenX;
+  handleGesture(); // Chama a função que decide se foi swipe
+});
+
+// 3. Calcula a direção e chama a troca de imagem
+function handleGesture() {
+  // Se arrastou para a esquerda (próxima foto)
+  if (touchendX < touchstartX - 50) {
+    console.log("Arrastou para esquerda -> Próximo");
+
+    // AQUI: Chame a função que avança o slide
+    // Exemplo: proximoSlide(); ou mudarSlide(indice + 1);
+    avancarSlide();
+  }
+
+  // Se arrastou para a direita (foto anterior)
+  if (touchendX > touchstartX + 50) {
+    console.log("Arrastou para direita -> Anterior");
+
+    // AQUI: Chame a função que volta o slide
+    // Exemplo: slideAnterior(); ou mudarSlide(indice - 1);
+    voltarSlide();
+  }
 }
