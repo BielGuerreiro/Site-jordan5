@@ -101,5 +101,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        const width = sliderWrapper.offsetWidth;
+        sliderWrapper.scrollTo({
+          left: width * index,
+          behavior: "smooth",
+        });
+      });
+    });
   }
 });

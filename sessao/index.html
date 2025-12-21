@@ -17,6 +17,102 @@
 
     <link rel="shortcut icon" href="../img/Nike-Logo.png" type="image/x-icon" />
   </head>
+
+  <header>
+    <div class="menu">
+      <ul>
+        <li class="btn-menu-toggle"><i class="bx bx-menu"></i></li>
+
+        <li class="home-destaque" id="btn-central-acao">
+          <i class="bx bx-home-alt icon-home"></i>
+
+          <img src="img/voltar.png" alt="Fechar Menu" class="icon-close-img" />
+        </li>
+
+        <li class="btn-carrinho-toggle">
+          <i class="bx bx-shopping-bag"></i>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="menu-expandido">
+    <div class="menu-container">
+      <div class="user" onclick="toggleMenu()">
+        <i class="bx bx-user"></i>
+        <span class="user-name" id="nome-usuario">Olá, Doritoz</span>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-box">
+        <a href=""><i class="bx bx-lock-open-alt"></i> <span>Entrar</span></a>
+      </div>
+
+      <div class="menu-box">
+        <a href=""><i class="bx bx-user-plus"></i> <span>Cadastrar</span></a>
+      </div>
+
+      <div class="menu-box">
+        <a href=""><i class="bx bx-package"></i> <span>Meus Pedidos</span></a>
+      </div>
+
+      <div class="menu-box sair-conta">
+        <i class="bx bx-arrow-out-right-square-half"></i>
+        <span>Sair da Conta</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="carrinho-expandido">
+    <div class="carrinho-header">
+      <h3>Produtos no carrinho</h3>
+      <span class="qtd-badge">4 itens</span>
+    </div>
+
+    <div class="lista-produtos">
+      <div class="produto-item">
+        <div class="mini-box-cinza">
+          <img src="img/acessorio6.webp" alt="Produto" />
+        </div>
+        <div class="produto-info">
+          <h4>Apple watch</h4>
+          <p>R$ 299,99</p>
+        </div>
+        <i class="bx bx-trash-alt"></i>
+      </div>
+
+      <div class="produto-item">
+        <div class="mini-box-cinza">
+          <img src="img/produto6.avif" alt="Produto" />
+        </div>
+        <div class="produto-info">
+          <h4>Jordan 5 Blue</h4>
+          <p>R$ 50,00</p>
+        </div>
+        <i class="bx bx-trash-alt"></i>
+      </div>
+
+      <div class="produto-item">
+        <div class="mini-box-cinza">
+          <img src="img/produto3.png" alt="Produto" />
+        </div>
+        <div class="produto-info">
+          <h4>Jordan 5 Red</h4>
+          <p>R$ 50,00</p>
+        </div>
+        <i class="bx bx-trash-alt"></i>
+      </div>
+    </div>
+
+    <div class="finalizar">
+      <a href="">Finalizar Compras</a>
+    </div>
+  </div>
+
+  <div class="logo">
+    <img src="../img/Nike-Logo.png" alt="" />
+  </div>
   <body>
     <div class="lista-vertical">
       <div class="produto-item">
