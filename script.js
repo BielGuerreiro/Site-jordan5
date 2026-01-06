@@ -35,7 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (header.classList.contains("menu-ativo")) {
         fecharTudo();
       } else {
-        console.log("Ação Home");
+        const paginaAtual = window.location.pathname;
+
+        if (
+          paginaAtual.includes("index.html") ||
+          paginaAtual === "/" ||
+          paginaAtual.endsWith("/")
+        ) {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        } else {
+          window.location.href = "index.html";
+        }
       }
     });
   }

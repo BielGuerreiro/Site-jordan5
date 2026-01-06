@@ -80,6 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCentral.addEventListener("click", () => {
       if (header.classList.contains("menu-ativo")) {
         fecharTudo();
+      } else {
+        // Se estiver fechado, volta para a home
+        // OBS: Se sua página de produto estiver numa pasta, use "../index.html"
+        window.location.href = "index.html";
       }
     });
   }
