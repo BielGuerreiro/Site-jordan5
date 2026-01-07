@@ -120,7 +120,7 @@
     </div>
   </div>
 
-  <body>
+  <body id="home">
     <div class="slider-container">
       <div class="slider-wrapper">
         <div class="slide">
@@ -143,16 +143,16 @@
 
     <div class="container-info">
       <div class="cabecalho-produto">
-        <h1>Air Jordan 5 Retro</h1>
-        <p class="preco">R$ 1.299,90</p>
-        <p class="parcela">em até 10x de R$ 129,99 sem juros</p>
+        <h1 class="efeito1">Air Jordan 5 Retro</h1>
+        <p class="preco efeito1">R$ 1.299,90</p>
+        <p class="parcela efeito1">em até 10x de R$ 129,99 sem juros</p>
       </div>
 
       <div class="area-tabela">
-        <p id="btn-tabela">Tabela de medidas</p>
+        <p id="btn-tabela efeito1">Tabela de medidas</p>
       </div>
 
-      <div class="box-seletor" id="box-tamanho">
+      <div class="box-seletor efeito1" id="box-tamanho">
         <div class="seletor-topo">
           <span id="tamanho-selecionado">Selecione o Tamanho</span>
           <i class="bx bx-chevron-down"></i>
@@ -167,7 +167,7 @@
         </div>
       </div>
 
-      <div class="box-seletor box-qtd">
+      <div class="box-seletor box-qtd efeito1">
         <button class="btn-qtd" onclick="mudarQtd(-1)">
           <i class="bx bx-minus"></i>
         </button>
@@ -177,9 +177,9 @@
         </button>
       </div>
 
-      <button class="btn-comprar">COMPRAR AGORA</button>
+      <button class="btn-comprar efeito1">COMPRAR AGORA</button>
 
-      <div class="descricao-area">
+      <div class="descricao-area efeito3">
         <h3>Descrição</h3>
         <p>
           Este modelo icônico traz o design clássico com conforto moderno.
@@ -204,56 +204,55 @@
     </div>
 
     <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>INFORMAÇÕES</h3>
-          <ul>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Troca e Devoluções</a></li>
-            <li><a href="#">Formas de pagamento</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>POLÍTICAS</h3>
-          <ul>
-            <li><a href="#">Termos e Condições</a></li>
-            <li><a href="#">Politica de Privacidade</a></li>
-            <li><a href="#">Politica de Cookie</a></li>
-          </ul>
-        </div>
+      <div class="footer-logo efeito1">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg"
+          alt="Nike Logo"
+          style="width: 60px"
+        />
       </div>
 
-      <div class="icones">
-        <li>
-          <a href=""><i class="bx bxl-instagram"></i></a>
-        </li>
+      <nav class="footer-nav efeito1">
+        <ul>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Troca e Devoluções</a></li>
+          <li><a href="#">Formas de pagamento</a></li>
+          <li><a href="#">Termos e Condições</a></li>
+          <li><a href="#">Politica de Privacidade</a></li>
+          <li><a href="#">Politica de Cookie</a></li>
+        </ul>
+      </nav>
 
-        <li>
-          <a href=""><i class="bx bxl-linkedin"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="bx bxl-whatsapp"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="bx bxl-github"></i></a>
-        </li>
+      <div class="icones efeito1">
+        <a href=""><i class="bx bxl-instagram"></i></a>
+        <a href=""><i class="bx bxl-facebook"></i></a>
+        <a href=""><i class="bx bxl-whatsapp"></i></a>
+        <a href=""><i class="bx bxl-github"></i></a>
+        <a href=""><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-tiktok"></i></a>
       </div>
 
-      <div class="footer-bottom">
+      <div class="footer-line efeito3"></div>
+
+      <div class="footer-copyright efeito3">
         <p>
           &copy; 2025 Nike. Projeto desenvolvido por
           <strong>BielGuerreiro</strong> para fins educacionais.
           <br />
-          <span class="detalhe"
-            >Este site é um projeto puramente educacional para fins de estudo de
+          <span class="detalhe">
+            Este site é um projeto puramente educacional para fins de estudo de
             programação. Não possui fins lucrativos e não tem afiliação com a
-            Nike Inc. Todas as imagens e marcas pertencem aos seus respectivos
-            donos.</span
-          >
+            Nike Inc.
+          </span>
         </p>
       </div>
+
+      <div class="footer-line efeito3"></div>
+
+      <a href="#home" class="back-to-top efeito3">
+        Voltar ao topo <i class="bx bx-up-arrow-alt"></i>
+      </a>
     </footer>
 
     <script src="../script.js"></script>

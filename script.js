@@ -1,60 +1,4 @@
-//LÓGICA DO MENU E CARRINHO
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const btnMenu = document.querySelector(".btn-menu-toggle");
-  const btnCarrinho = document.querySelector(".btn-carrinho-toggle");
-  const btnCentral = document.getElementById("btn-central-acao");
-
-  const boxMenu = document.querySelector(".menu-expandido");
-  const boxCarrinho = document.querySelector(".carrinho-expandido");
-
-  function fecharTudo() {
-    if (boxMenu) boxMenu.classList.remove("aberto");
-    if (boxCarrinho) boxCarrinho.classList.remove("aberto");
-    header.classList.remove("menu-ativo");
-  }
-
-  if (btnMenu) {
-    btnMenu.addEventListener("click", () => {
-      if (boxCarrinho) boxCarrinho.classList.remove("aberto");
-      if (boxMenu) boxMenu.classList.add("aberto");
-      header.classList.add("menu-ativo");
-    });
-  }
-
-  if (btnCarrinho) {
-    btnCarrinho.addEventListener("click", () => {
-      if (boxMenu) boxMenu.classList.remove("aberto");
-      if (boxCarrinho) boxCarrinho.classList.add("aberto");
-      header.classList.add("menu-ativo");
-    });
-  }
-
-  if (btnCentral) {
-    btnCentral.addEventListener("click", () => {
-      if (header.classList.contains("menu-ativo")) {
-        fecharTudo();
-      } else {
-        const paginaAtual = window.location.pathname;
-
-        if (
-          paginaAtual.includes("index.html") ||
-          paginaAtual === "/" ||
-          paginaAtual.endsWith("/")
-        ) {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        } else {
-          window.location.href = "index.html";
-        }
-      }
-    });
-  }
-});
-
-// LÓGICA DO BANNER PRINCIPAL
+// LÓGICA DO BANNER PRINCIPAL _____________________________________________________________________________________
 const bannerContainer = document.querySelector(".banner");
 const slides = document.querySelectorAll(".slider-item");
 const indicators = document.querySelectorAll(".indicator");
@@ -100,7 +44,7 @@ indicators.forEach((indicator, index) => {
   });
 });
 
-// LÓGICA DE ARRASTAR O DEDO NO BANNER
+// LÓGICA DE ARRASTAR O DEDO NO BANNER ________________________________________
 let touchStartX = 0;
 let touchEndX = 0;
 
@@ -160,3 +104,59 @@ if (trilhoProdutos && slidesProdutos.length > 0) {
     });
   }
 }
+
+//LÓGICA DO MENU E CARRINHO _________________________________________________________________
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const btnMenu = document.querySelector(".btn-menu-toggle");
+  const btnCarrinho = document.querySelector(".btn-carrinho-toggle");
+  const btnCentral = document.getElementById("btn-central-acao");
+
+  const boxMenu = document.querySelector(".menu-expandido");
+  const boxCarrinho = document.querySelector(".carrinho-expandido");
+
+  function fecharTudo() {
+    if (boxMenu) boxMenu.classList.remove("aberto");
+    if (boxCarrinho) boxCarrinho.classList.remove("aberto");
+    header.classList.remove("menu-ativo");
+  }
+
+  if (btnMenu) {
+    btnMenu.addEventListener("click", () => {
+      if (boxCarrinho) boxCarrinho.classList.remove("aberto");
+      if (boxMenu) boxMenu.classList.add("aberto");
+      header.classList.add("menu-ativo");
+    });
+  }
+
+  if (btnCarrinho) {
+    btnCarrinho.addEventListener("click", () => {
+      if (boxMenu) boxMenu.classList.remove("aberto");
+      if (boxCarrinho) boxCarrinho.classList.add("aberto");
+      header.classList.add("menu-ativo");
+    });
+  }
+
+  if (btnCentral) {
+    btnCentral.addEventListener("click", () => {
+      if (header.classList.contains("menu-ativo")) {
+        fecharTudo();
+      } else {
+        const paginaAtual = window.location.pathname;
+
+        if (
+          paginaAtual.includes("index.html") ||
+          paginaAtual === "/" ||
+          paginaAtual.endsWith("/")
+        ) {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        } else {
+          window.location.href = "index.html";
+        }
+      }
+    });
+  }
+});
