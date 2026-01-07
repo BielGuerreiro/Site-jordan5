@@ -4,7 +4,8 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -70,7 +71,7 @@ header {
   position: fixed;
   width: 100%;
   height: 10vh;
-  background-color: #cfcfcf;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -496,6 +497,10 @@ header.menu-ativo .home-destaque {
   user-select: none;
 }
 
+.box-seletor.ativo {
+  z-index: 50;
+}
+
 .seletor-topo {
   display: flex;
   justify-content: space-between;
@@ -513,9 +518,9 @@ header.menu-ativo .home-destaque {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 10;
+  z-index: 20;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -552,6 +557,7 @@ header.menu-ativo .home-destaque {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
+
 #numero-qtd {
   font-size: 18px;
   font-weight: bold;
